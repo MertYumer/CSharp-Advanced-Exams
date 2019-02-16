@@ -6,15 +6,15 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "ConsoleApp1sacsac/1.0.0": {
+      "P04-HitList/1.0.0": {
         "runtime": {
-          "ConsoleApp1sacsac.dll": {}
+          "P04-HitList.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "ConsoleApp1sacsac/1.0.0": {
+    "P04-HitList/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

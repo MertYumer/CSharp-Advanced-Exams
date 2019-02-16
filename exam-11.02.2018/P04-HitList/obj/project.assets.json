@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\C# Advanced Exams\\exam-11.02.2018\\ConsoleApp1sacsac\\ConsoleApp1sacsac.csproj",
-      "projectName": "ConsoleApp1sacsac",
-      "projectPath": "D:\\Projects\\C# Advanced Exams\\exam-11.02.2018\\ConsoleApp1sacsac\\ConsoleApp1sacsac.csproj",
+      "projectUniqueName": "D:\\Projects\\C# Advanced Exams\\exam-11.02.2018\\P04-HitList\\P04-HitList.csproj",
+      "projectName": "P04-HitList",
+      "projectPath": "D:\\Projects\\C# Advanced Exams\\exam-11.02.2018\\P04-HitList\\P04-HitList.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\C# Advanced Exams\\exam-11.02.2018\\ConsoleApp1sacsac\\obj\\",
+      "outputPath": "D:\\Projects\\C# Advanced Exams\\exam-11.02.2018\\P04-HitList\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
