@@ -8,3 +8,4 @@ D:\Projects\C# Advanced Exams\demo-exam-17.02.2019\P02-ExcelFunctions\obj\Debug\
 D:\Projects\C# Advanced Exams\demo-exam-17.02.2019\P02-ExcelFunctions\obj\Debug\netcoreapp2.1\P02-ExcelFunctions.AssemblyInfo.cs
 D:\Projects\C# Advanced Exams\demo-exam-17.02.2019\P02-ExcelFunctions\obj\Debug\netcoreapp2.1\P02-ExcelFunctions.dll
 D:\Projects\C# Advanced Exams\demo-exam-17.02.2019\P02-ExcelFunctions\obj\Debug\netcoreapp2.1\P02-ExcelFunctions.pdb
+D:\Projects\C# Advanced Exams\demo-exam-17.02.2019\P02-ExcelFunctions\obj\Debug\netcoreapp2.1\P02-ExcelFunctions.csprojAssemblyReference.cache

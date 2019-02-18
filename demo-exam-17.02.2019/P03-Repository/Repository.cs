@@ -8,20 +8,18 @@
         private Dictionary<int, Person> data;
         private int id;
 
-        public int Count { get; private set; }
+        public int Count => this.data.Count;
 
         public Repository()
         {
             this.data = new Dictionary<int, Person>();
             this.id = 0;
-            this.Count = 0;
         }
 
         public void Add(Person person)
         {
             this.data.Add(id, person);
             id++;
-            this.Count++;
         }
 
         public Person Get(int id)
@@ -48,7 +46,6 @@
             }
 
             this.data.Remove(id);
-            this.Count--;
             return true;
         }
     }
