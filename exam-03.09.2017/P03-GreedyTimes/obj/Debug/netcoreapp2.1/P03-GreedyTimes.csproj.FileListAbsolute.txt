@@ -1,0 +1,11 @@
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\bin\Debug\netcoreapp2.1\P03-GreedyTimes.deps.json
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\bin\Debug\netcoreapp2.1\P03-GreedyTimes.runtimeconfig.json
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\bin\Debug\netcoreapp2.1\P03-GreedyTimes.runtimeconfig.dev.json
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\bin\Debug\netcoreapp2.1\P03-GreedyTimes.dll
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\bin\Debug\netcoreapp2.1\P03-GreedyTimes.pdb
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\obj\Debug\netcoreapp2.1\P03-GreedyTimes.csprojAssemblyReference.cache
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\obj\Debug\netcoreapp2.1\P03-GreedyTimes.csproj.CoreCompileInputs.cache
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\obj\Debug\netcoreapp2.1\P03-GreedyTimes.AssemblyInfoInputs.cache
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\obj\Debug\netcoreapp2.1\P03-GreedyTimes.AssemblyInfo.cs
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\obj\Debug\netcoreapp2.1\P03-GreedyTimes.dll
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P03-GreedyTimes\obj\Debug\netcoreapp2.1\P03-GreedyTimes.pdb

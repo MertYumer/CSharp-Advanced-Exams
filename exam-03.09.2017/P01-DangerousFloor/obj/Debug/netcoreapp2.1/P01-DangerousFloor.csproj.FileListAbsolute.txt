@@ -1,0 +1,11 @@
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\bin\Debug\netcoreapp2.1\P01-DangerousFloor.deps.json
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\bin\Debug\netcoreapp2.1\P01-DangerousFloor.runtimeconfig.json
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\bin\Debug\netcoreapp2.1\P01-DangerousFloor.runtimeconfig.dev.json
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\bin\Debug\netcoreapp2.1\P01-DangerousFloor.dll
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\bin\Debug\netcoreapp2.1\P01-DangerousFloor.pdb
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\obj\Debug\netcoreapp2.1\P01-DangerousFloor.csprojAssemblyReference.cache
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\obj\Debug\netcoreapp2.1\P01-DangerousFloor.csproj.CoreCompileInputs.cache
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\obj\Debug\netcoreapp2.1\P01-DangerousFloor.AssemblyInfoInputs.cache
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\obj\Debug\netcoreapp2.1\P01-DangerousFloor.AssemblyInfo.cs
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\obj\Debug\netcoreapp2.1\P01-DangerousFloor.dll
+D:\Projects\C# Advanced Exams\exam-03.09.2017\P01-DangerousFloor\obj\Debug\netcoreapp2.1\P01-DangerousFloor.pdb
