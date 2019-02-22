@@ -1,0 +1,11 @@
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\bin\Debug\netcoreapp2.1\P02-JediGalaxy.deps.json
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\bin\Debug\netcoreapp2.1\P02-JediGalaxy.runtimeconfig.json
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\bin\Debug\netcoreapp2.1\P02-JediGalaxy.runtimeconfig.dev.json
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\bin\Debug\netcoreapp2.1\P02-JediGalaxy.dll
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\bin\Debug\netcoreapp2.1\P02-JediGalaxy.pdb
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\obj\Debug\netcoreapp2.1\P02-JediGalaxy.csproj.CoreCompileInputs.cache
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\obj\Debug\netcoreapp2.1\P02-JediGalaxy.AssemblyInfoInputs.cache
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\obj\Debug\netcoreapp2.1\P02-JediGalaxy.AssemblyInfo.cs
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\obj\Debug\netcoreapp2.1\P02-JediGalaxy.dll
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\obj\Debug\netcoreapp2.1\P02-JediGalaxy.pdb
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P02-JediGalaxy\obj\Debug\netcoreapp2.1\P02-JediGalaxy.csprojAssemblyReference.cache

@@ -17,7 +17,8 @@
 
                 if (input == "Analyze")
                 {
-
+                    Console.WriteLine(sum);
+                    Console.WriteLine(Math.Pow(n, 3) - changedCells);
                     break;
                 }
 
@@ -33,9 +34,6 @@
                     changedCells++;
                 }
             }
-
-            Console.WriteLine(sum);
-            Console.WriteLine(Math.Pow(n, 3) - changedCells);
         }
 
         public static bool HasValidCoordinates(int table, int row, int col, int n)

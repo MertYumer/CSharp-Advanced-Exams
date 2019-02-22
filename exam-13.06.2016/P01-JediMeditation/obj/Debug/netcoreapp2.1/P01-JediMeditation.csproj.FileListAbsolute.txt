@@ -1,0 +1,11 @@
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\bin\Debug\netcoreapp2.1\P01-JediMeditation.deps.json
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\bin\Debug\netcoreapp2.1\P01-JediMeditation.runtimeconfig.json
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\bin\Debug\netcoreapp2.1\P01-JediMeditation.runtimeconfig.dev.json
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\bin\Debug\netcoreapp2.1\P01-JediMeditation.dll
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\bin\Debug\netcoreapp2.1\P01-JediMeditation.pdb
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\obj\Debug\netcoreapp2.1\P01-JediMeditation.csprojAssemblyReference.cache
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\obj\Debug\netcoreapp2.1\P01-JediMeditation.csproj.CoreCompileInputs.cache
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\obj\Debug\netcoreapp2.1\P01-JediMeditation.AssemblyInfoInputs.cache
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\obj\Debug\netcoreapp2.1\P01-JediMeditation.AssemblyInfo.cs
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\obj\Debug\netcoreapp2.1\P01-JediMeditation.dll
+D:\Projects\C# Advanced Exams\exam-13.06.2016\P01-JediMeditation\obj\Debug\netcoreapp2.1\P01-JediMeditation.pdb
