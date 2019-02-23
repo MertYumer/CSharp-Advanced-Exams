@@ -1,0 +1,11 @@
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\bin\Debug\netcoreapp2.1\P01-CollectResources.deps.json
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\bin\Debug\netcoreapp2.1\P01-CollectResources.runtimeconfig.json
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\bin\Debug\netcoreapp2.1\P01-CollectResources.runtimeconfig.dev.json
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\bin\Debug\netcoreapp2.1\P01-CollectResources.dll
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\bin\Debug\netcoreapp2.1\P01-CollectResources.pdb
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\obj\Debug\netcoreapp2.1\P01-CollectResources.csprojAssemblyReference.cache
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\obj\Debug\netcoreapp2.1\P01-CollectResources.csproj.CoreCompileInputs.cache
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\obj\Debug\netcoreapp2.1\P01-CollectResources.AssemblyInfoInputs.cache
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\obj\Debug\netcoreapp2.1\P01-CollectResources.AssemblyInfo.cs
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\obj\Debug\netcoreapp2.1\P01-CollectResources.dll
+D:\Projects\C# Advanced Exams\exam-28.02.2016\P01-CollectResources\obj\Debug\netcoreapp2.1\P01-CollectResources.pdb
