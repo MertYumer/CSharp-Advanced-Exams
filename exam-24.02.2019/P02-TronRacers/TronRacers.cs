@@ -13,23 +13,21 @@
 
         public static void Main()
         {
-            var field = new char[n, n];
+            var field = new char[n][];
 
             for (int row = 0; row < n; row++)
             {
-                string elements = Console.ReadLine();
+                field[row] = Console.ReadLine().ToCharArray();
 
-                for (int col = 0; col < n; col++)
+                for (int col = 0; col < field[row].Length; col++)
                 {
-                    field[row, col] = elements[col];
-
-                    if (field[row, col] == 'f')
+                    if (field[row][col] == 'f')
                     {
                         playerOneRow = row;
                         playerOneCol = col;
                     }
 
-                    else if (field[row, col] == 's')
+                    else if (field[row][col] == 's')
                     {
                         playerTwoRow = row;
                         playerTwoCol = col;
@@ -61,75 +59,45 @@
             }
         }
 
-        public static void PrintField(char[,] field)
+        public static void PrintField(char[][] field)
         {
-            for (int row = 0; row < n; row++)
+            foreach (var row in field)
             {
-                for (int col = 0; col < n; col++)
-                {
-                    Console.Write(field[row, col]);
-                }
-
-                Console.WriteLine();
+                Console.WriteLine(string.Join("", row));
             }
         }
 
-        public static void MovePlayer(char[,] field, int row, int col,
+        public static void MovePlayer(char[][] field, int row, int col,
             string command, char symbol, char enemy)
         {
             switch (command)
             {
                 case "up":
-                    row = row - 1 >= 0 ? row - 1 : n - 1;
-
-                    if (field[row, col] == enemy)
-                    {
-                        deadPlayer = true;
-                        field[row, col] = 'x';
-                        break;
-                    }
-
-                    field[row, col] = symbol;
+                    row = row > 0 ? row - 1 : n - 1;
                     break;
 
                 case "right":
-                    col = col + 1 < n ? col + 1 : 0;
-
-                    if (field[row, col] == enemy)
-                    {
-                        deadPlayer = true;
-                        field[row, col] = 'x';
-                        break;
-                    }
-
-                    field[row, col] = symbol;
+                    col = col < n - 1 ? col + 1 : 0;
                     break;
 
                 case "down":
-                    row = row + 1 < n ? row + 1 : 0;
-
-                    if (field[row, col] == enemy)
-                    {
-                        deadPlayer = true;
-                        field[row, col] = 'x';
-                        break;
-                    }
-
-                    field[row, col] = symbol;
+                    row = row < n - 1 ? row + 1 : 0;
                     break;
 
                 case "left":
-                    col = col - 1 >= 0 ? col - 1 : n - 1;
-
-                    if (field[row, col] == enemy)
-                    {
-                        deadPlayer = true;
-                        field[row, col] = 'x';
-                        break;
-                    }
-
-                    field[row, col] = symbol;
+                    col = col > 0 ? col - 1 : n - 1;
                     break;
+            }
+
+            if (field[row][col] == enemy)
+            {
+                deadPlayer = true;
+                field[row][col] = 'x';
+            }
+
+            else
+            {
+                field[row][col] = symbol;
             }
 
             playerOneRow = symbol == 'f' ? row : playerOneRow;

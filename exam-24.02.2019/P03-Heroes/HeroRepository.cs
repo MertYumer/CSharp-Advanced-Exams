@@ -54,11 +54,7 @@
 
             foreach (var hero in this.data)
             {
-                stringBuilder.AppendLine($"Hero: {hero.Name} - {hero.Level}lvl");
-                stringBuilder.AppendLine("Item:");
-                stringBuilder.AppendLine($"  * Strength: {hero.Item.Strength}");
-                stringBuilder.AppendLine($"  * Ability: {hero.Item.Ability}");
-                stringBuilder.Append($"  * Intelligence: {hero.Item.Intelligence}");
+                stringBuilder.Append($"{hero.ToString()}");
             }
 
             return stringBuilder.ToString();

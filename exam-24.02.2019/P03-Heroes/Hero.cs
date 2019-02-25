@@ -21,10 +21,7 @@
         {
             var stringBuilder = new StringBuilder();
             stringBuilder.AppendLine($"Hero: {Name} - {Level}lvl");
-            stringBuilder.AppendLine("Item:");
-            stringBuilder.AppendLine($"  * Strength: {this.Item.Strength}");
-            stringBuilder.AppendLine($"  * Ability: {this.Item.Ability}");
-            stringBuilder.Append($"  * Intelligence: {this.Item.Intelligence}");
+            stringBuilder.Append($"{this.Item.ToString()}");
             return stringBuilder.ToString();
         }
     }
