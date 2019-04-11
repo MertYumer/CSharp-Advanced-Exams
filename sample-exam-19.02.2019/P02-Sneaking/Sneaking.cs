@@ -4,147 +4,66 @@
 
     public class Sneaking
     {
+        public static char[][] field;
+        public static int samRow;
+        public static int samCol;
+
         public static void Main()
         {
-            int rows = int.Parse(Console.ReadLine());
-            var field = new char[rows][];
-            int samRow = -1;
-            int samCol = -1;
+            int n = int.Parse(Console.ReadLine());
+            field = new char[n][];
+            FindSam();
 
-            for (int row = 0; row < rows; row++)
-            {
-                field[row] = Console.ReadLine().ToCharArray();
-
-                for (int col = 0; col < field[row].Length; col++)
-                {
-                    if (field[row][col] == 'S')
-                    {
-                        samRow = row;
-                        samCol = col;
-                    }
-                }
-            }
-
-            string directions = Console.ReadLine();
+            var directions = Console.ReadLine();
 
             foreach (var direction in directions)
             {
-                for (int row = 0; row < field.GetLength(0); row++)
+                MoveEnemies();
+                bool samDied = CaughtByEnemy();
+
+                if (samDied)
                 {
-                    for (int col = 0; col < field[row].Length; col++)
-                    {
-                        if (field[row][col] == 'd')
-                        {
-                            if (col == 0)
-                            {
-                                field[row][col] = 'b';
-                            }
-
-                            else
-                            {
-                                field[row][col] = '.';
-                                field[row][col - 1] = 'd';
-                            }
-
-                            continue;
-                        }
-
-                        if (field[row][col] == 'b')
-                        {
-                            if (col == field[row].Length - 1)
-                            {
-                                field[row][col] = 'd';
-                            }
-
-                            else
-                            {
-                                field[row][col] = '.';
-                                field[row][col + 1] = 'b';
-                                col++;
-                            }
-                        }
-                    }
+                    field[samRow][samCol] = 'X';
+                    Console.WriteLine($"Sam died at {samRow}, {samCol}");
+                    PrintField();
+                    return;
                 }
 
+                field[samRow][samCol] = '.';
+                bool nikoladzeDied;
 
                 switch (direction)
                 {
                     case 'U':
-                        if (CaughtByEnemy(field, samRow, samCol))
-                        {
-                            field[samRow][samCol] = 'X';
-                            Console.WriteLine($"Sam died at {samRow}, {samCol}");
-                            PrintField(field);
-                            return;
-                        }
-
-                        field[samRow][samCol] = '.';
                         samRow--;
                         field[samRow][samCol] = 'S';
+                        nikoladzeDied = CheckForNikoladze();
 
-                        for (int col = 0; col < field[samRow].Length; col++)
+                        if (nikoladzeDied)
                         {
-                            if (field[samRow][col] == 'N')
-                            {
-                                field[samRow][col] = 'X';
-                                Console.WriteLine("Nikoladze killed!");
-                                PrintField(field);
-                                return;
-                            }
+                            return;
                         }
 
                         break;
 
                     case 'D':
-                        if (CaughtByEnemy(field, samRow, samCol))
-                        {
-                            field[samRow][samCol] = 'X';
-                            Console.WriteLine($"Sam died at {samRow}, {samCol}");
-                            PrintField(field);
-                            return;
-                        }
-
-                        field[samRow][samCol] = '.';
                         samRow++;
                         field[samRow][samCol] = 'S';
+                        nikoladzeDied = CheckForNikoladze();
 
-                        for (int col = 0; col < field[samRow].Length; col++)
+                        if (nikoladzeDied)
                         {
-                            if (field[samRow][col] == 'N')
-                            {
-                                field[samRow][col] = 'X';
-                                Console.WriteLine("Nikoladze killed!");
-                                PrintField(field);
-                                return;
-                            }
+                            return;
                         }
 
                         break;
 
                     case 'L':
-                        if (CaughtByEnemy(field, samRow, samCol))
-                        {
-                            field[samRow][samCol] = 'X';
-                            Console.WriteLine($"Sam died at {samRow}, {samCol}");
-                            PrintField(field);
-                            return;
-                        }
-
-                        field[samRow][samCol] = '.';
                         samCol--;
                         field[samRow][samCol] = 'S';
                         break;
 
                     case 'R':
-                        if (CaughtByEnemy(field, samRow, samCol))
-                        {
-                            field[samRow][samCol] = 'X';
-                            Console.WriteLine($"Sam died at {samRow}, {samCol}");
-                            PrintField(field);
-                            return;
-                        }
-
-                        field[samRow][samCol] = '.';
                         samCol++;
                         field[samRow][samCol] = 'S';
                         break;
@@ -152,7 +71,32 @@
             }
         }
 
-        public static bool CaughtByEnemy(char[][] field, int samRow, int samCol)
+        public static bool CheckForNikoladze()
+        {
+            for (int col = 0; col < field[samRow].Length; col++)
+            {
+                if (field[samRow][col] == 'N')
+                {
+                    field[samRow][col] = 'X';
+                    Console.WriteLine("Nikoladze killed!");
+                    PrintField();
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public static void PrintField()
+        {
+            foreach (var row in field)
+            {
+                Console.WriteLine(string.Join("", row));
+            }
+        }
+
+        public static bool CaughtByEnemy()
         {
             for (int col = 0; col < samCol; col++)
             {
@@ -173,11 +117,60 @@
             return false;
         }
 
-        public static void PrintField(char[][] field)
+        public static void MoveEnemies()
         {
             for (int row = 0; row < field.GetLength(0); row++)
             {
-                Console.WriteLine(string.Join("", field[row]));
+                for (int col = 0; col < field[row].Length; col++)
+                {
+                    if (field[row][col] == 'd')
+                    {
+                        if (col == 0)
+                        {
+                            field[row][col] = 'b';
+                        }
+
+                        else
+                        {
+                            field[row][col] = '.';
+                            field[row][col - 1] = 'd';
+                        }
+
+                        continue;
+                    }
+
+                    if (field[row][col] == 'b')
+                    {
+                        if (col == field[row].Length - 1)
+                        {
+                            field[row][col] = 'd';
+                        }
+
+                        else
+                        {
+                            field[row][col] = '.';
+                            field[row][col + 1] = 'b';
+                            col++;
+                        }
+                    }
+                }
+            }
+        }
+
+        public static void FindSam()
+        {
+            for (int row = 0; row < field.Length; row++)
+            {
+                field[row] = Console.ReadLine().ToCharArray();
+
+                for (int col = 0; col < field[row].Length; col++)
+                {
+                    if (field[row][col] == 'S')
+                    {
+                        samRow = row;
+                        samCol = col;
+                    }
+                }
             }
         }
     }

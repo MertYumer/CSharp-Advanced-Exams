@@ -8,8 +8,8 @@
     {
         public static void Main()
         {
-            var hospital = new Dictionary<string, string[][]>();
             var doctors = new Dictionary<string, List<string>>();
+            var departments = new Dictionary<string, List<string>>();
 
             while (true)
             {
@@ -21,45 +21,12 @@
                     break;
                 }
 
-                string department = input[0];
-                string doctor = input[1] + ' ' + input[2];
-                string patient = input[3];
-                bool foundBed = false;
+                var department = input[0];
+                var name = input[1] + ' ' + input[2];
+                var patient = input[3];
 
-                if (!hospital.ContainsKey(department))
-                {
-                    hospital[department] = new string[20][];
-                }
-
-                for (int room = 0; room < hospital[department].Length; room++)
-                {
-                    if (hospital[department][room] == null)
-                    {
-                        hospital[department][room] = new string[3];
-                    }
-
-                    for (int bed = 0; bed < hospital[department][room].Length; bed++)
-                    {
-                        if (hospital[department][room][bed] == null)
-                        {
-                            hospital[department][room][bed] = patient;
-                            foundBed = true;
-                            break;
-                        }
-                    }
-
-                    if (foundBed)
-                    {
-                        break;
-                    }
-                }
-
-                if (!doctors.ContainsKey(doctor))
-                {
-                    doctors[doctor] = new List<string>();
-                }
-
-                doctors[doctor].Add(patient);
+                AddPatient(doctors, name, patient);
+                AddPatient(departments, department, patient);
             }
 
             while (true)
@@ -72,47 +39,58 @@
                     break;
                 }
 
-                int room = -1;
-
-                if (command.Length == 2)
+                else if (command.Length == 1)
                 {
-                    if (int.TryParse(command[1], out room))
+                    var searchedDepartment = departments[command[0]];
+                    PrintPatients(searchedDepartment);
+                }
+
+                else if (int.TryParse(command[1], out int room))
+                {
+                    int roomNumber = int.Parse(command[1]) - 1;
+
+                    if (roomNumber >= 20)
                     {
-                        string department = command[0];
-                        room = int.Parse(command[1]) - 1;
-
-                        var filteredRoom = hospital[department][room]
-                            .Where(p => p != null)
-                            .OrderBy(p => p);
-
-                        foreach (var patient in filteredRoom)
-                        {
-                            Console.WriteLine(patient);
-                        }
+                        continue;
                     }
 
-                    else
-                    {
-                        string doctor = command[0] + ' ' + command[1];
+                    var searchedRoom = departments[command[0]]
+                        .Skip(3 * roomNumber)
+                        .Take(3)
+                        .OrderBy(p => p)
+                        .ToList();
 
-                        foreach (var patient in doctors[doctor].OrderBy(p => p))
-                        {
-                            Console.WriteLine(patient);
-                        }
-                    }
+                    PrintPatients(searchedRoom);
                 }
 
                 else
                 {
-                    string department = command[0];
+                    var doctor = command[0] + ' ' + command[1];
+                    var doctorsPatients = doctors[doctor]
+                        .OrderBy(p => p)
+                        .ToList();
 
-                    foreach (var chamber in hospital[department].Where(c => c != null))
-                    {
-                        Console.WriteLine(string.Join(Environment.NewLine,
-                            chamber.Where(p => p != null)));
-                    }
+                    PrintPatients(doctorsPatients);
                 }
             }
+        }
+
+        public static void PrintPatients(List<string> patients)
+        {
+            foreach (var patient in patients)
+            {
+                Console.WriteLine(patient);
+            }
+        }
+
+        public static void AddPatient(Dictionary<string, List<string>> collection, string name, string patient)
+        {
+            if (!collection.ContainsKey(name))
+            {
+                collection[name] = new List<string>();
+            }
+
+            collection[name].Add(patient);
         }
     }
 }

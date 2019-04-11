@@ -20,9 +20,7 @@
             summedQuantity["Cash"] = 0;
 
             string input = Console.ReadLine();
-            string pattern = @"(gold|[a-zA-Z]{3}|[a-zA-Z]+gem)[\s]+([0-9]+)";
-            var regex = new Regex(pattern, RegexOptions.IgnoreCase);
-            MatchCollection matchedTypes = regex.Matches(input);
+            MatchCollection matchedTypes = FindMatches(input);
 
             foreach (Match match in matchedTypes)
             {
@@ -33,14 +31,7 @@
                 {
                     if (item.ToLower() == "gold")
                     {
-                        if (!allTypes["Gold"].ContainsKey(item))
-                        {
-                            allTypes["Gold"][item] = 0;
-                        }
-
-                        allTypes["Gold"][item] += quantity;
-                        summedQuantity["Gold"] += quantity;
-                        bagCapacity -= quantity;
+                        AddQuantity(allTypes, item, quantity, summedQuantity, "Gold");
                     }
 
                     else if (item.ToLower().EndsWith("gem") && item.Length > 3)
@@ -50,14 +41,7 @@
                             continue;
                         }
 
-                        if (!allTypes["Gem"].ContainsKey(item))
-                        {
-                            allTypes["Gem"][item] = 0;
-                        }
-
-                        allTypes["Gem"][item] += quantity;
-                        summedQuantity["Gem"] += quantity;
-                        bagCapacity -= quantity;
+                        AddQuantity(allTypes, item, quantity, summedQuantity, "Gem");
                     }
 
                     else if (item.Length == 3)
@@ -67,18 +51,19 @@
                             continue;
                         }
 
-                        if (!allTypes["Cash"].ContainsKey(item))
-                        {
-                            allTypes["Cash"][item] = 0;
-                        }
-
-                        allTypes["Cash"][item] += quantity;
-                        summedQuantity["Cash"] += quantity;
-                        bagCapacity -= quantity;
+                        AddQuantity(allTypes, item, quantity, summedQuantity, "Cash");
                     }
+
+                    bagCapacity -= quantity;
                 }
             }
 
+            PrintTypes(allTypes, summedQuantity);
+        }
+
+        public static void PrintTypes(Dictionary<string, Dictionary<string, long>> allTypes,
+            Dictionary<string, long> summedQuantity)
+        {
             foreach (var type in allTypes.Where(t => t.Value.Any()))
             {
                 Console.WriteLine($"<{type.Key}> ${summedQuantity[type.Key]}");
@@ -92,6 +77,27 @@
                     Console.WriteLine($"##{item.Key} - {item.Value}");
                 }
             }
+        }
+
+        public static void AddQuantity(Dictionary<string, Dictionary<string, long>> allTypes,
+            string item, long quantity, Dictionary<string, long> summedQuantity, string type)
+        {
+            if (!allTypes[type].ContainsKey(item))
+            {
+                allTypes[type][item] = 0;
+            }
+
+            allTypes[type][item] += quantity;
+            summedQuantity[type] += quantity;
+        }
+
+        public static MatchCollection FindMatches(string input)
+        {
+            string pattern = @"(gold|[a-zA-Z]{3}|[a-zA-Z]+gem)[\s]+([0-9]+)";
+            var regex = new Regex(pattern, RegexOptions.IgnoreCase);
+            MatchCollection matchedTypes = regex.Matches(input);
+
+            return matchedTypes;
         }
     }
 }
